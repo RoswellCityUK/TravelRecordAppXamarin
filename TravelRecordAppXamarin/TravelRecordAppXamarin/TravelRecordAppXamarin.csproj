@@ -25,8 +25,7 @@
     <EmbeddedResource Update="MapPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-<<<<<<<<< Temporary merge branch 1
-=========
+
     <EmbeddedResource Update="NewTravelPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

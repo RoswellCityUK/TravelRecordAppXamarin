@@ -3,14 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             xmlns:local="clr-namespace:TravelRecordAppXamarin"
              x:Class="TravelRecordAppXamarin.HomePage">
-<<<<<<< HEAD
+
     <TabbedPage.ToolbarItems>
         <ToolbarItem x:Name="btnAdd"
                      Text="Add"
                      Clicked="btnAdd_Clicked"/>
     </TabbedPage.ToolbarItems>
-=======
->>>>>>> 339289cbac8d612958c68a4235c009a03c58d14f
+
     <local:HistoryPage Title="History"/>
     <local:MapPage Title="Map"/>
     <local:ProfilePage Title="Profile"/>

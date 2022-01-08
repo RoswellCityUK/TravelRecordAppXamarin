@@ -16,13 +16,10 @@ namespace TravelRecordAppXamarin
         {
             InitializeComponent();
         }
-<<<<<<< HEAD
 
         private void btnAdd_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new NewTravelPage());
         }
-=======
->>>>>>> 339289cbac8d612958c68a4235c009a03c58d14f
     }
 }

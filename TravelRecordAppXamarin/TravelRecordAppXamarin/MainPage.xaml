@@ -12,9 +12,6 @@
                Placeholder="Password"
                TextColor="{StaticResource blueColor}"
                Keyboard="Email"/>
-        <Entry x:Name="txtPassword"
-               Placeholder="Password"
-               IsPassword="True"/>
         <Button x:Name="btnLogin"
                 Margin="0,50"
                 Text="Log in"

@@ -7,7 +7,7 @@
     <TabbedPage.ToolbarItems>
         <ToolbarItem x:Name="btnAdd"
                      Text="Add"
-                     Clicked="btnAdd_Clicked"/>
+                     Clicked="ButtonAdd_Clicked"/>
     </TabbedPage.ToolbarItems>
 
     <local:HistoryPage Title="History"/>

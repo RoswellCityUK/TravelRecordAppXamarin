@@ -6,18 +6,14 @@
     <StackLayout VerticalOptions="Center"
                  Margin="20,0">
         <Entry x:Name="txtEmail" Placeholder="Email Address"
-               TextColor="{StaticResource blueColor}"
                Keyboard="Email"/>
         <Entry x:Name="txtPassword"
                Placeholder="Password"
-               TextColor="{StaticResource blueColor}"
                Keyboard="Email"/>
         <Button x:Name="btnLogin"
                 Margin="0,50"
                 Text="Log in"
-                Clicked="btnLogin_Clicked"
-                BackgroundColor="{StaticResource blueColor}"
-                TextColor="White"/>
+                Clicked="btnLogin_Clicked"/>
     </StackLayout>
 
 </ContentPage>

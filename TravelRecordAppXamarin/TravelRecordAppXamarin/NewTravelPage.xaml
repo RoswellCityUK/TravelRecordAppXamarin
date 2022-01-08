@@ -2,9 +2,13 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TravelRecordAppXamarin.NewTravelPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="BtnSave"
+                     Text="Save"
+                     Clicked="BtnSave_Clicked"/>
+    </ContentPage.ToolbarItems>
     <StackLayout>
-            <Label Text="Welcome to New Travel Page!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <Entry x:Name="TxtExperience"
+               Placeholder="Write your experience (250)"/>
+    </StackLayout>
 </ContentPage>

@@ -11,6 +11,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Model\APIKeys.cs.template" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Model\APIKeys.cs.template" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
     <PackageReference Include="Xam.Plugin.Geolocator" Version="4.5.0.6" />
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2291" />

@@ -5,6 +5,7 @@ using Android.Content.PM;
 using Android.Runtime;
 using Android.OS;
 using System.IO;
+using Android;
 
 namespace TravelRecordAppXamarin.Droid
 {
@@ -22,6 +23,11 @@ namespace TravelRecordAppXamarin.Droid
             string dbName = "travelDB.sqlite";
             string folderPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
             string fullPath = Path.Combine(folderPath, dbName);
+
+            if (CheckSelfPermission(Manifest.Permission.AccessCoarseLocation) != (int)Permission.Granted)
+            {
+                RequestPermissions(new string[] { Manifest.Permission.AccessCoarseLocation, Manifest.Permission.AccessFineLocation }, 0);
+            }
 
             LoadApplication(new App(fullPath));
         }

@@ -28,7 +28,7 @@ namespace TravelRecordAppXamarin
 
             var position = await locator.GetPositionAsync();
 
-            var center = new Xamarin.Forms.Maps.Position(position.Latitude, position.Latitude);
+            var center = new Xamarin.Forms.Maps.Position(position.Latitude, position.Longitude);
             var span = new Xamarin.Forms.Maps.MapSpan(center, 2, 2);
 
             locationsMap.MoveToRegion(span);
@@ -36,10 +36,17 @@ namespace TravelRecordAppXamarin
 
         private void Locator_PositionChanged(object sender, Plugin.Geolocator.Abstractions.PositionEventArgs e)
         {
-            var center = new Xamarin.Forms.Maps.Position(e.Position.Latitude, e.Position.Latitude);
+            var center = new Xamarin.Forms.Maps.Position(e.Position.Latitude, e.Position.Longitude);
             var span = new Xamarin.Forms.Maps.MapSpan(center, 2, 2);
 
             locationsMap.MoveToRegion(span);
+        }
+        protected async override void OnDisappearing()
+        {
+            base.OnDisappearing();
+
+            await CrossGeolocator.Current.StopListeningAsync();
+            CrossGeolocator.Current.PositionChanged -= Locator_PositionChanged;
         }
     }
 }

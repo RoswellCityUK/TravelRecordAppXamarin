@@ -9,7 +9,7 @@
                Keyboard="Email"/>
         <Entry x:Name="txtPassword"
                Placeholder="Password"
-               Keyboard="Email"/>
+               IsPassword="True"/>
         <Button x:Name="btnLogin"
                 Margin="0,50"
                 Text="Log in"

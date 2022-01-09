@@ -1,7 +1,7 @@
-﻿namespace TravelRecordAppXamarin
+﻿/*namespace TravelRecordAppXamarin
 {
     public static class APIKeys
     {
         public const string AndroidGoogleMapsApiKey = "-- YOUR API KEY GOES HERE --";
     }
-}
+}*/

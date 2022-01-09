@@ -25,15 +25,16 @@ namespace TravelRecordAppXamarin
                 Experience = TxtExperience.Text
             };
 
-            SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation);
-            conn.CreateTable<Post>();
-            int rows = conn.Insert(post);
-            conn.Close();
+            using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
+            {
+                conn.CreateTable<Post>();
+                int rows = conn.Insert(post);
 
-            if (rows > 0)
-                DisplayAlert("Success", "Experience succesfully inserted", "OK");
-            else
-                DisplayAlert("Failure", "Experience not inserted", "OK");
+                if (rows > 0)
+                    DisplayAlert("Success", "Experience succesfully inserted", "OK");
+                else
+                    DisplayAlert("Failure", "Experience not inserted", "OK");
+            }
         }
     }
 }
